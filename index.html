@@ -4,32 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BLog Design - Sahal Ashfaq</title>
+    <title>PALLETDOCS Journal</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="swipers.css">
     <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.11/dist/lenis.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.3.11/dist/lenis.css">
 </head>
 
 <body>
+    <div class="readingProgress" aria-hidden="true"><span></span></div>
+
     <main id="main">
         <header>
-            <a href="" class="logoContainer">
-                <img loading="lazy" src="./images/logo.webp" alt="" class="logo">
+            <a href="#main" class="logoContainer" title="PALLETDOCS home">
+                <img loading="lazy" src="./images/logo.webp" alt="PALLETDOCS logo" title="PALLETDOCS logo" class="logo">
                 <h3>PALLETDOCS</h3>
             </a>
-            <nav>
+            <nav aria-label="Main navigation">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Blogs</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#main" title="Go to homepage">Home</a></li>
+                    <li><a href="#latest" title="Browse all articles">Blogs</a></li>
+                    <li><a href="#footer" title="Learn about PALLETDOCS">About</a></li>
+                    <li><a href="#newsletter" title="Contact the PALLETDOCS team">Contact Us</a></li>
                 </ul>
             </nav>
             <div class="actionButtons">
-                <a href="#" class="profileLink" title="profile">
-                    <img loading="lazy" src="./images/profile.webp" alt="">
+                <a href="#newsletter" class="profileLink" title="Get updates from PALLETDOCS">
+                    <img loading="lazy" src="./images/profile.webp" alt="PALLETDOCS newsletter avatar"
+                        title="PALLETDOCS newsletter avatar">
                 </a>
-                <button id="DarkModeToggle">
+                <button id="DarkModeToggle" title="Toggle dark mode" aria-label="Toggle dark mode">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24px" width="24px"
                         fill="#e3e3e3">
                         <path
@@ -38,36 +42,322 @@
                 </button>
             </div>
         </header>
+
         <section class="hero">
-            <h1>Explore New Ideas and Stories <br> Worth Your Time</h1>
-            <div class="cardsContainer">
-                <article class="heroCards"><img loading="lazy" src="./images/poster1.webp" alt=""></article>
-                <article class="heroCards"><img loading="lazy" src="./images/poster2.webp" alt=""></article>
-                <article class="heroCards"><img loading="lazy" src="./images/poster3.webp" alt=""></article>
-                <article class="heroCards"><img loading="lazy" src="./images/poster4.webp" alt=""></article>
-                <article class="heroCards"><img loading="lazy" src="./images/poster5.webp" alt=""></article>
-                <article class="heroCards"><img loading="lazy" src="./images/poster6.webp" alt=""></article>
-                <article class="heroCards"><img loading="lazy" src="./images/poster7.webp" alt=""></article>
+            <span class="textureChunk textureChunk--a" aria-hidden="true"></span>
+            <span class="textureChunk textureChunk--b" aria-hidden="true"></span>
+            <span class="textureChunk textureChunk--c" aria-hidden="true"></span>
+            <h1 data-parallax="0.02">Explore New Ideas and Stories <br> Worth Your Time</h1>
+            <div class="cardsContainer" data-parallax="0.05">
+                <article class="heroCards" title="Featured story: The craft of product design">
+                    <img loading="lazy" src="./images/poster1.webp" alt="Cover art for The craft of product design"
+                        title="Cover art for The craft of product design">
+                </article>
+                <article class="heroCards" title="Featured story: Engineering at scale">
+                    <img loading="lazy" src="./images/poster2.webp" alt="Cover art for Engineering at scale"
+                        title="Cover art for Engineering at scale">
+                </article>
+                <article class="heroCards" title="Featured story: Creative direction">
+                    <img loading="lazy" src="./images/poster3.webp" alt="Cover art for Creative direction"
+                        title="Cover art for Creative direction">
+                </article>
+                <article class="heroCards" title="Featured story: Systems thinking">
+                    <img loading="lazy" src="./images/poster4.webp" alt="Cover art for Systems thinking"
+                        title="Cover art for Systems thinking">
+                </article>
+                <article class="heroCards" title="Featured story: Culture and community">
+                    <img loading="lazy" src="./images/poster5.webp" alt="Cover art for Culture and community"
+                        title="Cover art for Culture and community">
+                </article>
+                <article class="heroCards" title="Featured story: Practical guides">
+                    <img loading="lazy" src="./images/poster6.webp" alt="Cover art for Practical guides"
+                        title="Cover art for Practical guides">
+                </article>
+                <article class="heroCards" title="Featured story: Emerging technology">
+                    <img loading="lazy" src="./images/poster7.webp" alt="Cover art for Emerging technology"
+                        title="Cover art for Emerging technology">
+                </article>
             </div>
             <p class="herotitle">
                 Fresh perspectives, insightful articles, and engaging stories across topics that spark
                 curiosity, inspire creativity, and keep you informed.
             </p>
             <div class="HerobuttonContainer">
-                <button class="primary">
-                    Explore Blogs
-                </button>
-                <button class="secondry">
+                <a href="#latest" class="primary" title="Browse all articles">Explore Blogs</a>
+                <a href="#newsletter" class="secondry" title="Subscribe to newsletter updates">
                     Sign To an Account
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24px" width="24px"
                         fill="#e3e3e3">
                         <path d="M8.03,22L6.25,20.23L14.48,12L6.25,3.77L8.03,2l10,10l-10,10Z" />
                     </svg>
-                </button>
+                </a>
+            </div>
+            <div class="scrollCue" title="Scroll down to explore articles">
+                <span class="scrollCueText">Scroll to explore</span>
+                <span class="scrollMouse"><span class="scrollWheel"></span></span>
             </div>
         </section>
+
+        <section class="topicTicker" aria-label="Explore topics">
+            <span class="textureChunk textureChunk--a" aria-hidden="true"></span>
+            <span class="textureChunk textureChunk--b" aria-hidden="true"></span>
+            <div class="tickerTrack">
+                <div class="tickerGroup">
+                    <a href="#latest" title="Browse Technology articles">Technology</a><span>&#10022;</span>
+                    <a href="#latest" title="Browse Design articles">Design</a><span>&#10022;</span>
+                    <a href="#latest" title="Browse Engineering articles">Engineering</a><span>&#10022;</span>
+                    <a href="#latest" title="Browse Culture articles">Culture</a><span>&#10022;</span>
+                    <a href="#latest" title="Browse Guides articles">Guides</a><span>&#10022;</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="blogSection" id="latest" aria-label="Latest stories">
+            <span class="textureChunk textureChunk--a" aria-hidden="true"></span>
+            <span class="textureChunk textureChunk--b" aria-hidden="true"></span>
+            <div class="sectionTop">
+                <div>
+                    <h2>Latest stories</h2>
+                </div>
+                <p>Six new reads on the tools, systems, and ideas moving the web forward.</p>
+                <div class="swiperControls">
+                    <button class="swiperNav prev" type="button" title="Previous latest stories"
+                        aria-label="Previous latest stories">&#8249;</button>
+                    <div class="swiperDots" role="tablist" aria-label="Latest stories pages"></div>
+                    <button class="swiperNav next" type="button" title="Next latest stories"
+                        aria-label="Next latest stories">&#8250;</button>
+                </div>
+            </div>
+            <div class="swiper" data-swiper tabindex="0" aria-label="Latest stories carousel">
+                <div class="swiperTrack" data-track></div>
+            </div>
+        </section>
+
+        <section class="blogSection" id="trending" aria-label="Trending this week">
+            <span class="textureChunk textureChunk--a" aria-hidden="true"></span>
+            <span class="textureChunk textureChunk--b" aria-hidden="true"></span>
+            <div class="sectionTop">
+                <div>
+                    <h2>Trending this week</h2>
+                </div>
+                <p>The stories readers kept coming back to, shared, and argued about.</p>
+                <div class="swiperControls">
+                    <button class="swiperNav prev" type="button" title="Previous trending stories"
+                        aria-label="Previous trending stories">&#8249;</button>
+                    <div class="swiperDots" role="tablist" aria-label="Trending pages"></div>
+                    <button class="swiperNav next" type="button" title="Next trending stories"
+                        aria-label="Next trending stories">&#8250;</button>
+                </div>
+            </div>
+            <div class="swiper" data-swiper tabindex="0" aria-label="Trending articles carousel">
+                <div class="swiperTrack" data-track></div>
+            </div>
+        </section>
+
+        <section class="blogSection" id="guides" aria-label="Guides and field notes">
+            <span class="textureChunk textureChunk--a" aria-hidden="true"></span>
+            <span class="textureChunk textureChunk--b" aria-hidden="true"></span>
+            <div class="sectionTop">
+                <div>
+                    <h2>Guides &amp; field notes</h2>
+                </div>
+                <p>Practical, tested advice from people who ship the work.</p>
+                <div class="swiperControls">
+                    <button class="swiperNav prev" type="button" title="Previous guides"
+                        aria-label="Previous guides">&#8249;</button>
+                    <div class="swiperDots" role="tablist" aria-label="Guide pages"></div>
+                    <button class="swiperNav next" type="button" title="Next guides"
+                        aria-label="Next guides">&#8250;</button>
+                </div>
+            </div>
+            <div class="swiper" data-swiper tabindex="0" aria-label="Guides carousel">
+                <div class="swiperTrack" data-track></div>
+            </div>
+        </section>
+
+        <section class="blogSection" id="ideas" aria-label="Ideas and essays">
+            <span class="textureChunk textureChunk--a" aria-hidden="true"></span>
+            <span class="textureChunk textureChunk--b" aria-hidden="true"></span>
+            <div class="sectionTop">
+                <div>
+                    <h2>Ideas &amp; essays</h2>
+                </div>
+                <p>Slower, bigger thoughts for readers who like to stay a while.</p>
+                <div class="swiperControls">
+                    <button class="swiperNav prev" type="button" title="Previous essays"
+                        aria-label="Previous essays">&#8249;</button>
+                    <div class="swiperDots" role="tablist" aria-label="Essay pages"></div>
+                    <button class="swiperNav next" type="button" title="Next essays"
+                        aria-label="Next essays">&#8250;</button>
+                </div>
+            </div>
+            <div class="swiper" data-swiper tabindex="0" aria-label="Ideas and essays carousel">
+                <div class="swiperTrack" data-track></div>
+            </div>
+        </section>
+
+        <div class="loadMoreWrap">
+            <button class="primary loadMoreBtn" id="loadMoreBtn" type="button" aria-label="View more blogs" title="View more blogs">View More Blogs</button>
+        </div>
+
+        <section class="blogSection" id="archive" aria-label="From the archive" hidden>
+            <span class="textureChunk textureChunk--a" aria-hidden="true"></span>
+            <span class="textureChunk textureChunk--b" aria-hidden="true"></span>
+            <div class="sectionTop">
+                <div>
+                    <h2>Worth revisiting</h2>
+                </div>
+                <p>Older essays that still hold up better than most things built last quarter.</p>
+                <div class="swiperControls">
+                    <button class="swiperNav prev" type="button" title="Previous archive stories"
+                        aria-label="Previous archive stories">&#8249;</button>
+                    <div class="swiperDots" role="tablist" aria-label="Archive pages"></div>
+                    <button class="swiperNav next" type="button" title="Next archive stories"
+                        aria-label="Next archive stories">&#8250;</button>
+                </div>
+            </div>
+            <div class="swiper" data-swiper tabindex="0" aria-label="Archive carousel">
+                <div class="swiperTrack" data-track></div>
+            </div>
+        </section>
+
+        <section class="blogSection faqSection" id="faq" aria-label="Frequently asked questions">
+            <span class="textureChunk textureChunk--a" aria-hidden="true"></span>
+            <span class="textureChunk textureChunk--b" aria-hidden="true"></span>
+            <div class="sectionTop">
+                <div>
+                    <h2>FAQs</h2>
+                </div>
+                <p>Quick answers about reading, publishing, and keeping up with PALLETDOCS.</p>
+            </div>
+            <div class="faqList">
+                <details class="faqItem" open>
+                    <summary>What is PALLETDOCS?</summary>
+                    <p>An independent publication about technology, design, engineering, and the craft of building thoughtful digital products.</p>
+                </details>
+                <details class="faqItem">
+                    <summary>How often do you publish?</summary>
+                    <p>New articles go out every week. The homepage collects them into fresh reads, trending stories, guides, and long-form essays.</p>
+                </details>
+                <details class="faqItem">
+                    <summary>Are the articles free to read?</summary>
+                    <p>Yes. Every article on the site is free. The newsletter simply brings the best new reads straight to your inbox.</p>
+                </details>
+                <details class="faqItem">
+                    <summary>Can I contribute an article?</summary>
+                    <p>We welcome thoughtful pitches from writers and practitioners. Send a short outline through the newsletter form and tell us what you would like to explore.</p>
+                </details>
+                <details class="faqItem">
+                    <summary>How do I stop getting emails?</summary>
+                    <p>Every email includes an unsubscribe link at the bottom. One click is all it takes, no questions asked.</p>
+                </details>
+            </div>
+        </section>
+
+        <footer class="siteFooter" id="footer">
+            <div class="footerGrid">
+                <div class="footerBrand" id="about">
+                    <a href="#main" class="logoContainer" title="PALLETDOCS home">
+                        <img loading="lazy" src="./images/logo.webp" alt="PALLETDOCS logo" title="PALLETDOCS logo"
+                            class="logo">
+                        <h3>PALLETDOCS</h3>
+                    </a>
+                    <p class="footerMission">Independent writing on technology, design, and the craft of building thoughtful digital products.</p>
+                </div>
+
+                <div class="footerColumn">
+                    <h4>Categories</h4>
+                    <ul class="footerLinks">
+                        <li><a href="#latest" title="Browse Technology articles">Technology</a></li>
+                        <li><a href="#latest" title="Browse Design articles">Design</a></li>
+                        <li><a href="#latest" title="Browse Engineering articles">Engineering</a></li>
+                        <li><a href="#latest" title="Browse Culture articles">Culture</a></li>
+                        <li><a href="#latest" title="Browse Guides articles">Guides</a></li>
+                    </ul>
+                </div>
+
+                <div class="footerColumn" id="authors">
+                    <h4>Publication</h4>
+                    <ul class="footerLinks">
+                        <li><a href="#about" title="Read about PALLETDOCS">About us</a></li>
+                        <li><a href="#ideas" title="Meet the PALLETDOCS authors">Our writers</a></li>
+                        <li><a href="#archive" data-reveal-archive title="Browse the article archive">Archives</a></li>
+                        <li><a href="#guides" title="Read our editorial style guide">Style guide</a></li>
+                        <li><a href="#faq" title="Read frequently asked questions">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footerColumn">
+                    <h4>Social</h4>
+                    <ul class="footerLinks">
+                        <li><a href="https://x.com" target="_blank" rel="noopener noreferrer"
+                                title="Follow PALLETDOCS on X">X / Twitter</a></li>
+                        <li><a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"
+                                title="Follow PALLETDOCS on LinkedIn">LinkedIn</a></li>
+                        <li><a href="https://github.com" target="_blank" rel="noopener noreferrer"
+                                title="View PALLETDOCS on GitHub">GitHub</a></li>
+                        <li><a href="#newsletter" title="Subscribe to the PALLETDOCS newsletter">Newsletter</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="newsletterFooter" id="newsletter">
+                <form class="newsletterForm" id="newsletterForm" novalidate>
+                    <label class="srOnly" for="newsletterEmail">Email address</label>
+                    <input class="newsletterInput" id="newsletterEmail" type="email" name="email"
+                        placeholder="you@example.com" autocomplete="email" title="Enter your email address"
+                        aria-label="Enter your email address" required>
+                    <button class="primary newsletterSubmit" type="submit" title="Subscribe to newsletter">
+                        Subscribe
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="18px" width="18px"
+                            fill="currentColor">
+                            <path d="M8.03,22L6.25,20.23L14.48,12L6.25,3.77L8.03,2l10,10l-10,10Z" />
+                        </svg>
+                    </button>
+                </form>
+                <p class="newsletterMessage" id="newsletterMessage" role="status" aria-live="polite" hidden></p>
+            </div>
+
+            <div class="footerBottom">
+                <p>&copy; 2026 PALLETDOCS. All rights reserved.</p>
+                <p>Built with care for curious readers.</p>
+            </div>
+        </footer>
     </main>
+
+    <div class="postModal" id="postModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+        <div class="postModalBackdrop" data-close-modal title="Close article preview"></div>
+        <article class="postModalCard">
+            <button class="modalClose" type="button" data-close-modal title="Close article preview"
+                aria-label="Close article preview">&times;</button>
+            <img class="modalImage" id="modalImage" src="" alt="" title="">
+            <div class="modalBody">
+                <div class="modalMeta">
+                    <span class="articleCategory" id="modalCategory"></span>
+                    <span class="articleMetaDot"></span>
+                    <span id="modalReadTime"></span>
+                    <time id="modalDate"></time>
+                </div>
+                <h2 id="modalTitle"></h2>
+                <p id="modalExcerpt"></p>
+                <div class="modalAuthor">
+                    <img id="modalAvatar" src="" alt="" title="">
+                    <span id="modalAuthorName"></span>
+                </div>
+                <a href="#newsletter" class="primary modalCta" title="Subscribe to newsletter updates"
+                    data-close-modal>Subscribe for the full archive</a>
+            </div>
+        </article>
+    </div>
+
+    <button class="scrollTopBtn" id="scrollTopBtn" type="button" title="Scroll back to top"
+        aria-label="Scroll back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="18px" width="18px">
+            <path d="M12,6L20,14L18.6,15.4L12,8.8L5.4,15.4L4,14L12,6Z" />
+        </svg>
+    </button>
+
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 
 </html>
